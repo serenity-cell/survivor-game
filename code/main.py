@@ -12,7 +12,7 @@ class Player(pygame.sprite.Sprite):
 #--BASIC SETUP--
 pygame.init()
 screen = pygame.display.set_mode((window_width , window_height ))
-pygame.display.set_caption("shooter survival game - project #2")
+pygame.display.set_caption("shooter survival")
 running = True
 
 
@@ -24,7 +24,7 @@ player = Player(all_sprites)
 #--MAIN LOOP--
 while running:
      
-    #--basics events--
+    #--BASIC EVENT--
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False

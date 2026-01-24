@@ -16,9 +16,11 @@ class Game:
         self.collision_sprite = pygame.sprite.Group()
 
         #--SPRITES--
-        for i in range(20):
-            self.collision = Collision_sprite((self.all_sprites, self.collision_sprite), (randint(0,window_width),randint(0, window_height)), (400,400))
-        self.player = Player(self.all_sprites, (400, 200))
+        for i in range(8):
+            pos_x, pos_y = randint(0,window_width),randint(0, window_height)
+            width, height = randint(100, 200), randint(100, 200)
+            self.collision = Collision_sprite((self.all_sprites, self.collision_sprite), (pos_x, pos_y), (width, height))
+        self.player = Player(self.all_sprites, self.collision_sprite, (400, 200))
 
     def run(self):
         #--MAIN LOOP--
